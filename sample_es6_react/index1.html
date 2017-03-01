@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>new Angular</title>
+    <meta charset="utf-8"/>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  </head>
+
+  <body ng-app="myMap">
+
+    <div ng-controller="myCtrl">
+
+
+      <span> {{dig}} </span>
+
+      <input type="button" value="dont" ng-click="mad()"/>
+
+      <input type="text" value="{{name}}"  />
+
+     <input type="text" ng-model ="hang" />
+
+
+
+      <div class="alert alert-warning" ng-class="{'alert-danger':hang.length > characters}" ng-if= "hang.length !== characters" >
+
+        must be 5 characters!
+
+      </div>
+
+      <input type="text" ng-model="may"/>
+
+      <div class="alert" ng-class="{'alert-warning':may.length < characters, 'alert-danger': may.length > characters }" ng-show="may.length !== characters">
+
+        Must be 7 characters!!
+
+      </div>
+
+      <h4>list of rules</h4>
+        <ul>
+          <li ng-repeat="rule in rules">
+
+            {{rule.rulename}}
+          </li>
+        </ul>
+
+        <h4 ng-cloak>{{may}}</h4>
+
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="./ang.js"></script>
+  </body>
+
+</html>

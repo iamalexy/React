@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular application</title>
+  </head>
+<!--   <body ng-app="Todo">
+    <div class="page-container" ng-controller="TodoController">
+      <h3>Enter whatever</h3>
+      <input type="text" ng-model="name"/>
+      <span> {{ name }} </span>
+    </div>
+
+
+<
+
+   <div class="page-container" ng-controller="TodoController">
+     <ul class="todo-list" ng-repeat="todo in todos track by $index">
+       <li>
+         <span> {{ todos }} </span>
+
+       </li>
+
+     </ul>
+
+   </div>
+     <input type="text" value="click" ng-click="alertClick()" />
+
+     <button class="bt-achieve" ng-click="done(todo)">Done</button>
+
+   <script src="./ang.js"></script>
+  </body> -->
+
+<body ng-app="myApp">
+  <div ng-controller="myContrl">
+
+    <input type="text" ng-model="msg"/>
+
+    <span> {{msg}} </span>
+
+    <span> {{trail}} </span>
+    <span> {{dig}} </span>
+
+
+
+    <h3>Hello guys {{msg + " "+"this is so nice"}}</h3>
+
+
+    <input type="text" ng-model="trail"/>
+
+    <h2>Display todos</h2>
+    <ul class="todo-list" ng-repeat="todo in todos track by $index">
+      <li>
+        <span> {{todos}} </span>
+        <button class="bt bt-achieve" ng-click="done(todos)">Done</button>
+      </li>
+
+    </ul>
+
+    <input type="text" value="check" ng-click="tickClick()"/>
+    <input type="button" value="enter your value" ng-click="alertClick()"/>
+
+
+    <form name="myForm">
+      <label>
+        Enter text:
+        <input type="email" ng-model="field" name="myField" required maxlength="15" />
+      </label>
+        <div ng-messages="myForm.myField.$error" role="alert">
+        <div ng-message="required">Please enter a value for this field.</div>
+        <div ng-message="email">This field must be a valid email address.</div>
+        <div ng-message="maxlength">This field can be at most 15 characters long.</div>
+      </div>
+    </form>
+
+    <label>Enter your text for twitter</label>
+    <input type="text" ng-model="msg"/>
+    <hr/>
+    <h1>twitter.com/{{newMsg()}}</h1>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.6/angular-messages.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.6/angular-resource.min.js"></script>
+  <script src="./ang.js"></script>
+  <script src="./anglar.js"></script>
+</body>
+
+
+
+</html>
